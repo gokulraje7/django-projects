@@ -1,0 +1,13 @@
+{% extends 'users\layout.html' %}
+
+{% block body %}
+    <h2>welcome :  {{ request.user.first_name }} </h2>
+    <p>you are logged in successfully </p>
+    <br>
+    <p>Name : {{ request.user.first_name }} {{ request.user.last_name }} </p>
+    <p>Email : {{ request.user.email }} </p>
+    <a href="{% url 'logout' %}"><button> Logout </button> </a>
+
+
+
+{% endblock body %} 

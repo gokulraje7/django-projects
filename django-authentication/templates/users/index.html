@@ -1,0 +1,16 @@
+{% extends 'users/layout.html' %}
+
+
+{% block body %}
+    <div style=" height: 100vh; background-color: aqua; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <h2>welcome </h2>
+    <br>
+    <p> Simple user registration and user login Django webapp </p>
+    <br>
+    <a href="{% url 'login' %}"> <button type="submit">Login</button> </a>
+    <br>
+    <p>Or</p>
+    <br>
+    <a href="{% url 'signup' %}"><button type="submit"> Signup </button> </a>
+    </div>
+{% endblock %}

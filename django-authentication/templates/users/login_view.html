@@ -1,0 +1,29 @@
+{% extends 'users/layout.html' %}
+
+{% block body %}
+    {% if messages %}
+    <div class="message" style="border: 1px solid red; width: fit-content ; padding: 10px;border-radius: 5px; background-color: rgb(238, 163, 163); color: black;">
+        {% for message in messages %}
+            {{ message }} 
+        {% endfor %}
+    </div>
+
+    {% endif %}
+    <div style="height: 100vh; background-color: aqua; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <label for="">Username</label>
+        <input type="text" name="username" placeholder="enter your username (email)" autofocus>
+        <br>
+        <label for="">Password</label>
+        <input type="password" name="password" placeholder="enter your password">
+        <br>
+        <button type="submit" value="login">Login</button>
+
+        
+        
+    </form>
+    </div>
+
+{% endblock %}
